@@ -2,27 +2,27 @@
 
 ## Description
 
-Ce fichier de configuration est conçu pour optimiser votre environnement d'entraînement sur Counter-Strike 2 (CS2). Il automatise l'activation de paramètres essentiels pour la pratique, notamment la visualisation des trajectoires de grenades avec prévisualisation en temps réel, les impacts de balles prolongés, les munitions infinies et la gestion simplifiée des bots. L'objectif principal est de supprimer les contraintes du jeu compétitif standard pour vous permettre de vous concentrer exclusivement sur le perfectionnement de vos mécaniques, l'apprentissage de smokes, flashbangs, molotovs, et l'affinement de votre aim sans interruption.
+This configuration file is designed to optimize your training environment on Counter-Strike 2 (CS2). It automates the activation of essential parameters for practice, including real-time grenade trajectory visualization with preview, extended bullet impact display, infinite ammunition, and simplified bot management. The main objective is to remove standard competitive game constraints to allow you to focus exclusively on perfecting your mechanics, learning smokes, flashbangs, molotovs, and refining your aim without interruption.
 
 ## Installation
 
-### Installation automatique
+### Automatic Installation
 
-Pour simplifier l'installation, utilisez l'une des commandes ci-dessous selon votre système d'exploitation. Elle téléchargera automatiquement le fichier de configuration et le placera au bon endroit.
+To simplify installation, use one of the commands below depending on your operating system. It will automatically download the configuration file and place it in the right location.
 
 **Linux (Bash) :**
 ```bash
-mkdir -p ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/ && curl -s -o ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/practice.cfg https://raw.githubusercontent.com/Tasko-691/cs2-practice-config/main/practice.cfg && echo "Installation terminée avec succès. Exécutez 'exec practice' dans la console du jeu." || echo "Erreur : Vérifiez que le chemin d'installation de CS2 est correct."
+mkdir -p ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/ && curl -s -o ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/practice.cfg https://raw.githubusercontent.com/Tasko-691/cs2-practice-config/main/practice.cfg && echo "Installation completed successfully. Execute 'exec practice' in the game console." || echo "Error: Verify that the CS2 installation path is correct."
 ```
 
-**Windows (PowerShell - Exécuter en tant qu'administrateur) :**
+**Windows (PowerShell - Run as administrator) :**
 ```powershell
-$path = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg"; if (Test-Path $path) { try { Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Tasko-691/cs2-practice-config/main/practice.cfg" -OutFile "$path\practice.cfg" -ErrorAction Stop; Write-Host "Installation terminée avec succès. Exécutez 'exec practice' dans la console du jeu." -ForegroundColor Green } catch { Write-Host "Erreur : Permissions insuffisantes. Lancez PowerShell en tant qu'administrateur." -ForegroundColor Red } } else { Write-Host "Erreur : Le répertoire CS2 n'a pas été trouvé. Vérifiez votre installation." -ForegroundColor Red }
+$path = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg"; if (Test-Path $path) { try { Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Tasko-691/cs2-practice-config/main/practice.cfg" -OutFile "$path\practice.cfg" -ErrorAction Stop; Write-Host "Installation completed successfully. Execute 'exec practice' in the game console." -ForegroundColor Green } catch { Write-Host "Error: Insufficient permissions. Run PowerShell as administrator." -ForegroundColor Red } } else { Write-Host "Error: CS2 directory not found. Verify your installation." -ForegroundColor Red }
 ```
 
-### Méthode manuelle
+### Manual Method
 
-Le fichier `practice.cfg` doit être placé dans le répertoire de configuration de Counter-Strike 2 :
+The `practice.cfg` file must be placed in the Counter-Strike 2 configuration directory:
 
 **Windows :**
 ```
@@ -34,46 +34,46 @@ C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\ga
 ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/
 ```
 
-Une fois le fichier copié, exécutez la commande suivante dans la console du jeu :
+Once the file is copied, execute the following command in the game console :
 ```
 exec practice
 ```
 
-## Raccourcis clavier
+## Keybinds
 
-### Gestion des grenades
+### Grenade Management
 
-| Touche | Action | Description |
-|--------|--------|-------------|
-| **ALT** | Relancer la dernière grenade | Reproduit instantanément le dernier lancer de grenade effectué, idéal pour perfectionner un smoke ou un flash spécifique sans avoir à se repositionner |
-| **K** | Supprimer toutes les grenades actives | Élimine immédiatement tous les projectiles présents sur la map (smokes, molotovs, incendies), permet de nettoyer rapidement la zone d'entraînement |
+| Key | Action | Description |
+|-----|--------|-------------|
+| **ALT** | Rethrow last grenade | Instantly reproduces the last grenade throw performed, ideal for perfecting a specific smoke or flash without repositioning |
+| **K** | Remove all active grenades | Immediately eliminates all projectiles present on the map (smokes, molotovs, fires), allows quick cleanup of the training area |
 
-### Loadout rapide
+### Quick Loadout
 
-| Touche | Loadout | Contenu |
-|--------|---------|---------|
-| **F1** | AWP | AWP + Desert Eagle + Flashbang + Couteau |
-| **F2** | AK-47 | AK-47 + Desert Eagle + Flashbang + Couteau |
-| **F3** | M4A1-S | M4A1-S Silencieux + Desert Eagle + Flashbang + Couteau |
+| Key | Loadout | Content |
+|-----|---------|---------|
+| **F1** | AWP | AWP + Desert Eagle + Flashbang + Knife |
+| **F2** | AK-47 | AK-47 + Desert Eagle + Flashbang + Knife |
+| **F3** | M4A1-S | M4A1-S Silencer + Desert Eagle + Flashbang + Knife |
 
-*Ces raccourcis permettent de switcher instantanément entre les configurations d'armes précisées ci-dessus.*
+*These keybinds allow instant switching between the weapon configurations specified above.*
 
-### Contrôle du temps
+### Time Control
 
-| Touche | Vitesse |
-|--------|---------|
-| **F4** | Vitesse normale (1x) |
-| **↓**  | Ralenti extrême (0.1x) |
-| **←**  | Ralenti (0.3x) |
-| **↑**  | Ralenti modéré (0.5x) |
-| **→**  | Légèrement ralenti (0.7x) |
+| Key | Speed |
+|-----|-------|
+| **F4** | Normal speed (1x) |
+| **↓** | Extreme slow motion (0.1x) |
+| **←** | Slow motion (0.3x) |
+| **↑** | Moderate slow motion (0.5x) |
+| **→** | Slightly slowed (0.7x) |
 
-### Gestion des bots
+### Bot Management
 
-| Touche | Action | Description |
-|--------|--------|-------------|
-| **F5** | Expulser tous les bots | Retire tous les bots de la partie *(Note : En mode Deathmatch, la nécessité de maintenir 2 adversaires minimum empêche l'expulsion complète si vous êtes seul)* |
-| **F6** | Ajouter un bot | Fait spawn un bot aléatoire dans l'équipe adverse |
-| **P**  | Placer un bot | Positionne instantanément un bot à l'emplacement de votre viseur, pratique pour simuler des angles de tir spécifiques ou des situations de clutch |
+| Key | Action | Description |
+|-----|--------|-------------|
+| **F5** | Kick all bots | Removes all bots from the match *(Note: In Deathmatch mode, the requirement to maintain a minimum of 2 opponents prevents complete expulsion if you are alone)* |
+| **F6** | Add a bot | Spawns a random bot in the opposing team |
+| **P** | Place a bot | Instantly positions a bot at your crosshair location, useful for simulating specific shooting angles or clutch situations |
 
 ---
